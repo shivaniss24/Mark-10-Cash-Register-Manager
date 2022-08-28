@@ -24,11 +24,17 @@ else{
 
 function calculateChange(amountToBeReturned)
 {
-   for(var i=0;i<availableNotes.length;i++)
+    //go over all the avialable notes
+   for(let i=0;i<availableNotes.length;i++)
    {
-    var numberOfNotes=Math.trunc(amountToBeReturned/availableNotes[0]);
-    amountToBeReturned%=availableNotes[0];
-    noOfNotes[i].innerText=numberOfNotes;
+    //no of notes need for the denomination
+    var numberOfNotes=Math.trunc(amountToBeReturned/availableNotes[i]);
+    
+    //amount left after calculating the number of notes needed
+    amountToBeReturned = amountToBeReturned % availableNotes[i];
+   
+    //updating the no of notes in the table 
+    noOfNotes[i].innerText = numberOfNotes;
    }
 }
 function hideMessage()
