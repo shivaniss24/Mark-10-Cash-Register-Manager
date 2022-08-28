@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Mukta:wght@400;700&display=swap');
 
 :root{
-    --primary-color:#e879f9;
+--primary-color:#dfbcf7;
 }
 *{
     padding: 0;
@@ -9,17 +9,18 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #e879f9;
+    background-color: #dfbcf7;
 }
 .container
 {
  display:flex;
  flex-direction: column;
- width:50%;
+ width:60%;
  margin:auto;
 }
 .heading
 {
+    margin-top: 3rem;
     padding: 1rem;
     text-align: center;
 }
@@ -28,19 +29,30 @@ body{
     text-align: center;
     padding: 1rem;
 }
-
+.line{
+    margin: auto;
+}
 label
 {
-padding: 0.3rem;
+padding: 0.7rem;
 text-align: center;
+
 }
 #bill-amount
-{
+{ 
+    margin:auto;
     padding: 0.3rem;
+    border: 0.5px solid black;
+    border-radius: 0.5rem;
+
 }
 #cash-given
 {
+    margin:auto;
     padding: 0.3rem;
+    border: 0.5px solid black;
+    border-radius: 0.5rem;
+
 }
 #check-button
 {
@@ -50,8 +62,22 @@ text-align: center;
     border-radius: 1rem;
     margin-top: 1rem;
 }
-caption{
-    padding: 0.5rem;
+button:hover
+{
+    background-color: #dfbcf7;
+}
+#error-message
+{
+    margin: auto;
+}
+.change-table
+{
+    margin: auto;
+}
+.caption{
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
 }
 th,
 td
@@ -69,6 +95,7 @@ footer {
   footer p {
     font-size: large;
     text-align: center;
+    margin-top: 6rem;
   }
   
   .footer-list {
