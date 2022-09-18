@@ -88,28 +88,34 @@ td
     padding: 0.4rem;
 }
 
-footer {
+.footer
+{
+  margin-top: 7rem;
+  justify-content: center;
+}
+.copyright
+{
     text-align: center;
-  }
-  
-  footer p {
-    font-size: large;
+    font-family: var(--font-two);
+}
+.footer .social
+{
     text-align: center;
-    margin-top: 6rem;
-  }
-  
-  .footer-list {
-    margin: 1rem;
-  }
-  
-  a,
-  img,
-  li {
-    display: inline;
-  }
-  
-  img {
+    padding-bottom: 10px;
+}
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    margin-bottom: 0.5rem;
     width: 40px;
-    padding: 0.2rem;
-  }
-  
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0.8px;
+    opacity: 0.90;
+}
+.footer .social a:hover{
+    background-color: white;
+    border: 1px solid black;
+}
