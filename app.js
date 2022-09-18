@@ -10,7 +10,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
   hideMessage();
   if (billAmount.value > 0) {
     // 12
-    if (cashGiven.value >= billAmount.value) {
+    if (Number(cashGiven.value) >= Number(billAmount.value)) {
       // 2022> 12 => true
       const amountToBeReturned = cashGiven.value - billAmount.value; // 2022 - 12 = 2010
       calculateChange(amountToBeReturned);
@@ -18,14 +18,14 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
       showMessage("Do you wanna wash plates?");
     }
   } else {
-    showMessage("Invalid Bill Amount");
+    showMessage("Invalid Bill Amount!");
   }
 });
 
 function calculateChange(amountToBeReturned) {
   // 2010
   // go over all the available
-  for (let i = 0; i < availableNotes.length; i++) {
+  for (var i = 0; i < availableNotes.length; i++) {
     // no of notes need for the denomination
     const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
     // 2010 / 2000 = 1 || 10 / 500 = 0
